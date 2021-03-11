@@ -17,21 +17,21 @@ static NSString *cellIdStatic = @"TableViewCell";
         return nil;
     }
     
-    self.leftLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width / 2.0, 44.0)];
-    self.leftLabel.textAlignment = NSTextAlignmentCenter;
-    [self.contentView addSubview: self.leftLabel];
+    self.fullNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width / 2.0, 44.0)];
+    self.fullNameLabel.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview: self.fullNameLabel];
     
-    self.rightLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.leftLabel.frame.size.width, 0.0, [UIScreen mainScreen].bounds.size.width / 2.0, 44.0)];
-    self.rightLabel.textAlignment = NSTextAlignmentCenter;
-    [self.contentView addSubview: self.rightLabel];
+    self.ageLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.fullNameLabel.frame.size.width, 0.0, [UIScreen mainScreen].bounds.size.width / 2.0, 44.0)];
+    self.ageLabel.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview: self.ageLabel];
     
     
     return self;
 }
 
 - (void)setup:(Person*)person {
-    self.leftLabel.text = person.fullName;
-    self.rightLabel.text = person.age;
+    self.fullNameLabel.text = person.fullName;
+    self.ageLabel.text = person.age;
 }
 
 @end

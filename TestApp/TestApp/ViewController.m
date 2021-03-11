@@ -41,9 +41,6 @@
         cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableViewCell.cellId];
     }
     
-//    cell.leftLabel.text = [NSString stringWithFormat:@"Cell %ld", indexPath.row];
-//    cell.rightLabel.text =  [NSString stringWithFormat:@"Elements %@", self.people[indexPath.row]];
-    
     [cell setup:[self.people objectAtIndex:indexPath.row]];
     
     return cell;
