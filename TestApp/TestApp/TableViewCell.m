@@ -6,8 +6,10 @@
 //
 
 #import "TableViewCell.h"
+static NSString *cellIdStatic = @"TableViewCell";
 
 @implementation TableViewCell
++ (NSString*) cellId { return cellIdStatic; }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

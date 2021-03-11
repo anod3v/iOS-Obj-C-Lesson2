@@ -9,6 +9,8 @@
 
 @interface TableViewCell : UITableViewCell
 
++ (NSString*) cellId;
+
 @property (nonatomic, copy) UILabel *leftLabel;
 @property (nonatomic, copy) UILabel *rightLabel;
 

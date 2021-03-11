@@ -30,9 +30,9 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier"];
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: TableViewCell.cellId];
     if (!cell) {
-        cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifier"];
+        cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableViewCell.cellId];
     }
     
     cell.leftLabel.text = [NSString stringWithFormat:@"Cell %ld", indexPath.row];
